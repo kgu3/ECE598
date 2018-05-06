@@ -16,7 +16,8 @@ Also, fashionMNIST data needs to be placed in ./fashionMNIST/fashionMNIST_data
    - RepGAN_semiSup_RGB_run8e_pipeline_run4.py
    
 The learning rates are also hard coded, as explained above.
-The trainng data is located in ./celebA/celebA_data/, as tfRecord file.
+For training data, we first downloaded the celebA dataset, then converted all the *.jpg files in folder "img_align_celeba" into a tfRecord file, which will be used by the RepGAN_semiSup_RGB_run8e_pipeline_run4.py script.
+To generate this tfRecord file, first put the "img_align_celeba" folder from the downloaded dataset into ./celebA/celebA_data, then run convert2TFRecord_crop.py, which will generate the tfRecord file as "./celebA/celebA_data/trainData_crop_float32_0_255.tfrecords"
 
 **For svhn, call:**
    - RepGAN_semiSup_RGB_run8e.py
